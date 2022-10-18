@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Web Page</h2>
+<p>JavaScript</p>
+
+<p id="tambah"></p>
+<p id="kurang"></p>
+<p id="kali"></p>
+<p id="bagi"></p>
+
+<script>
+
+class matematika{
+	constructor(angka1,angka2){
+    	this.angka1 = angka1;
+        this.angka2 = angka2;
+    }
+    
+    tambah(){
+    	return this.angka1 + this.angka2;
+    }
+    
+    kurang(){
+    	return this.angka1 - this.angka2;
+    }
+    
+    kali(){
+    	return this.angka1 * this.angka2;
+    }
+    
+    bagi(){
+    	return this.angka1 / this.angka2;
+    }
+    
+    
+    
+}
+
+let hasil = new matematika(60,3);
+
+document.querySelector("#tambah").innerHTML = "Tambah : " + hasil.tambah();
+document.querySelector("#kurang").innerHTML = "kurang : " + hasil.kurang();
+document.querySelector("#kali").innerHTML = "kali : " + hasil.kali();
+document.querySelector("#bagi").innerHTML = "bagi : " + hasil.bagi();
+
+
+</script>
+
+</body>
+</html> 
