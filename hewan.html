@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+<body>
+
+
+<p id="run"></p>
+<p id="run2"></p>
+
+<script>
+
+class hewan{
+    // property
+	constructor(nama,jenis){
+    	this.nama = nama;
+        this.jenis = jenis;
+    }
+
+    // method
+    tampil () {
+        let isi = "<h1>Hewan</h1>nama hewan " + this.nama + "<br> jenis : " + this.jenis ;  
+        return isi ;
+    }
+}
+
+class habitat extends hewan {
+    // property
+    constructor(nama,jenis,nama_habitat,lokasi_habitat){
+        super(nama,jenis);
+        this.nama_habitat = nama_habitat;
+        this.lokasi_habitat = lokasi_habitat;
+    }
+
+    tampil () {
+        let isi =  " <h1>Hewan & Habitat </h1> nama hewan " + this.nama + "<br> jenis : " + this.jenis  + "<br> habitat :" + this.nama_habitat + "<br> lokasi : " + this.lokasi_habitat ;
+        return isi ;
+    }
+}
+
+let harimau = new hewan ("harimau","mamalia");
+let kucing = new habitat ("kucing","mamaiia","perkotaan","rumah")
+
+document.querySelector("#run").innerHTML = harimau.tampil();
+document.querySelector("#run2").innerHTML = kucing.tampil();
+
+
+
+</script>
+
+</body>
+</html> 
