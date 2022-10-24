@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h2>My First Web Page</h2>
+<p>JavaScript</p>
+
+<p id="run"></p>
+<p id="run2"></p>
+
+
+<script>
+
+class film{
+    
+    constructor(nama,genre,waktu,rating,pembuat){
+        this.nama = nama;
+        this.genre = genre;
+        this.waktu = waktu;
+        this.rating = rating;
+        this.pembuat = pembuat;
+    }
+    
+    cetak(){
+            let cetak = "nama : " + this.nama + "<br> genre : " + this.genre + "<br> waktu : " + this.waktu + "<br> rating " + this.rating + "<br> pembuat : " + this.pembuat + "<br>"
+            return cetak; 
+                        
+    }
+    
+}
+
+class action extends film{
+    
+    constructor(nama,genre,waktu,rating,pembuat,komen){
+        super(nama,genre,waktu,rating,pembuat);
+        this.komen = komen;
+    }
+
+    cetak(){
+        let tampilkan = "nama : " + this.nama + "<br> genre : " + this.genre + "<br> waktu : " + this.waktu + "<br> rating " + this.rating + "<br> pembuat : " + this.pembuat + "<br>komen : " + this.komen + "😍😍😍";  
+        return tampilkan;
+    }
+
+}
+
+class horror extends film {
+
+    constructor(nama,genre,waktu,rating,pembuat,komen){
+        super(nama,genre,waktu,rating,pembuat);
+        this.komen = komen;
+    }
+
+    cetak (){
+        let tampilkan = "nama : " + this.nama + "<br> genre : " + this.genre + "<br> waktu : " + this.waktu + "<br> rating " + this.rating + "<br> pembuat : " + this.pembuat + "<br>komen : " + this.komen + "😫😫😫";  
+        return tampilkan;
+    }
+
+}
+
+let batman = new action("batman","action","2 jam","9.0","zack snyder","gila keren banget");
+let boys = new horror("the boys","horror","3 jam","7.0","budi budimen","saya ketakutan")
+
+document.querySelector("#run").innerHTML = batman.cetak();
+document.querySelector("#run2").innerHTML = boys.cetak();
+
+
+
+</script>
+
+</body>
+</html> 
